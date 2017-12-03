@@ -10,9 +10,13 @@ attr_accessor :page, :page_number, :last_number
 		@page_number = []
 		url = HTTParty.get("http://www.wegottickets.com/searchresults/all")
 		@page ||= Nokogiri::HTML(url)
-		@name = []
+		@artist = []
 		@price = []
-		@description=[]
+		@city=[]
+		@venue=[]
+		@date=[]
+		@description = []
+		@time = []
 	end
 
 	def page_numbers
@@ -23,20 +27,47 @@ attr_accessor :page, :page_number, :last_number
 		puts last_number
 	end
 	
-	def name	
-		page.css('div.content.block-group.chatterbox-margin').each do |line|
-		@name << line.text.strip
+	def artist	
+		page.css('div.content.block-group.chatterbox-margin h2').each do |line|
+		@artist << line.text.strip
 		end
-		puts @name
 	end
 
-	def city	
+	def description	
 		page.search('div.venue-details i').remove
-		description = page.css('div.venue-details').each do |line|
+		city = page.css('div.venue-details').each do |line|
 		@description << line.text.strip
 		end
+	end
+
+	def date
+		description
 		@description.length.times do |i| 
-		p @description[i].to_s[0..-30]
+		@date << @description[i].to_s[-25..-7]
+		end
+	end
+
+	def time
+		description
+		@description.length.times do |i| 
+		@time << @description[i].to_s[-7..-1]
+		end
+	end
+
+	def city
+		description
+		@description.length.times do |i| 
+		city_index = @description[i].index(':')
+		@city << @description[i].to_s[0...city_index]
+		end
+	end
+
+	def venue
+		description
+		@city.length.times do |i| 
+		city_index = @description[i].index(':')
+		venue_index = @description[i].gsub(/\n/, '^').index('^')
+		@venue << @description[i].to_s[city_index+2...venue_index]
 		end
 	end
 
@@ -46,22 +77,30 @@ attr_accessor :page, :page_number, :last_number
 		end
 	end
 
-	# Headings for CSV file
-	def headings
-		CSV.open("event.csv", "w") do |file|
-		file << ["Description", "Price", "ticket availability", "Additional Information"]
+	def categories
+		artist
+		date
+		city
+		venue
+		price
+		time
 	end
-	end
+	
 	# Store Data in CSV
 	def store
-		description.length.times do |i|
-		file << [@description[i], @price[i]]
+		categories
+		CSV.open("event.csv", "w") do |file|
+		file << ["Artist", "Price", "City", "Venue", "Date"]
+
+		@artist.length.times do |i|
+		file << [@artist[i], @price[i], @city[i], @venue[i], @date[i], @time[i]]
+		end
 		end
 	end
 end
 
 scraper = Scraper.new
-scraper.page_numbers
-# scraper.name
-scraper.city
+# scraper.page_numbers
+# scraper.artist
+scraper.store
 

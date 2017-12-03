@@ -1,22 +1,11 @@
-Description,Price,ticket availability,Additional Information
-"BANGOR: Blue Sky Cafe
-                Fri 1st Dec, 2017, 6:30pm",£11.00,12 tickets available,NUS
-"BANGOR: Blue Sky Cafe
-                Fri 1st Dec, 2017, 6:30pm",£9.90,7 tickets available,Sold out
-"LEICESTER: The Musician
-                Fri 1st Dec, 2017, 8:00pm",£11.00,3 tickets available,Sold out
-"LONDON: Christ Church Mayfair
-                Fri 1st Dec, 2017, 7:00pm",£11.00,8 tickets available,CONCESSIONS
-"LONDON: Christ Church Mayfair
-                Fri 1st Dec, 2017, 7:00pm",£5.50,tickets are available,Sold out
-"BRACKNELL: The Keller and Apres
-                Fri 1st Dec, 2017, 7:00pm",£11.00,42 tickets available,
-"DEVIZES: Corn Exchange
-                Fri 1st Dec, 2017, 8:00pm",£11.00,13 tickets available,
-"EVESHAM: The Iron Road
-                Fri 1st Dec, 2017, 7:45pm",£11.00,,
-"CARDIFF: St John's Church, Canton
-                Fri 1st Dec, 2017, 7:00pm
-                Kizzy Crawford + Zim Voices",£13.75,,
-"WINCHCOMBE: Postlip Hall
-                Fri 1st Dec, 2017, 7:30pm",£11.00,,
+Artist,Price,city,venue,date
+A CHRISTMAS CAROL: A FOLK OPERA,£13.20,SOUTHAMPTON,Hanger Farm Arts Centre,"Sun 3rd Dec, 2017, ", 7:30pm
+A CHRISTMAS CAROL: A FOLK OPERA,£11.00,SOUTHAMPTON,Hanger Farm Arts Centre,"Sun 3rd Dec, 2017, ", 7:30pm
+A CHRISTMAS CRACKER OF SEASONAL SONGS,£9.90,BUXTON,The Green Man Gallery,"Sun 3rd Dec, 2017, ", 5:30pm
+A CHRISTMAS CRACKER OF SEASONAL SONGS,£8.80,BUXTON,The Green Man Gallery,"Sun 3rd Dec, 2017, ", 5:30pm
+ADVENT CAROL CONCERT,£13.75,SANDHURST,St Nicholas Church,"Sun 3rd Dec, 2017, ", 6:30pm
+AFTERNOON TEA WITH FATHER CHRISTMAS,£16.50,COVENTRY,Charterhouse Priory,"Sun 3rd Dec, 2017, ", 1:30pm
+AN ENGLISH CHRISTMAS BY OXFORD GIRLS' CHOIR AND ALUMNAE AT 7PM,£11.00,OXFORD,St John the Evangelist Church,"Sun 3rd Dec, 2017, ", 6:40pm
+AN ENGLISH CHRISTMAS BY OXFORD GIRLS' CHOIR AND ALUMNAE AT 7PM,£5.50,OXFORD,St John the Evangelist Church,"Sun 3rd Dec, 2017, ", 6:40pm
+AN ENGLISH CHRISTMAS BY OXFORD GIRLS' CHOIR AND ALUMNAE AT 7PM,£0.00,OXFORD,St John the Evangelist Church,"Sun 3rd Dec, 2017, ", 6:40pm
+ANDY WHITE,£13.20,BATH,Chapel Arts Centre,"Sun 3rd Dec, 2017, ", 7:30pm
