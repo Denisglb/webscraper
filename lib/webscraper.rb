@@ -107,6 +107,5 @@ end
 
 
 scraper = Scraper.new
-p scraper.last_number
 scraper.scrape_all
 
