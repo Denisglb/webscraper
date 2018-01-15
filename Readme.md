@@ -34,4 +34,3 @@ The scrapper searches for Artist, Price, City, Venue, Date and Time so you can h
 
 - open-uri
 - nokogiri
--
