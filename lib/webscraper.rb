@@ -93,7 +93,7 @@ attr_accessor :page, :last_number, :artist
 	end
 
 # Store Data in CSV
-	def Store
+	def store
 		# categories
 		CSV.open("event.csv", "w") do |file|
 		file << ["Artist", "Price", "City", "Venue", "Date", "Time"]
